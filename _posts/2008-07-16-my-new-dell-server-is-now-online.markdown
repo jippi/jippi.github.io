@@ -1,5 +1,5 @@
 ---
-title: 'Yay &#8211; my dell new server is now online :D'
+title: 'Yay! my dell new server is now online :D'
 author: Christian Winther
 layout: post
 categories:
@@ -8,14 +8,14 @@ categories:
 ---
 Finally I got the good news from my [new hosting company][1]
 
-I can hardly wait to get it FreeBSD 7.0 installed on it and setup a nice vhost system with Lighttpd + PostgreSQL. It&#8217;s gonna be awsome.
-The server I&#8217;m currently using is &#8216;only&#8217; Dual core XEON w/ 3.5Gb ram, and some random SATA drives, so the improvement should be huge <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_biggrin.gif' alt=':D' class='wp-smiley' />
+I can hardly wait to get it FreeBSD 7.0 installed on it and setup a nice vhost system with Lighttpd + PostgreSQL. It's gonna be awsome.
+The server I'm currently using is &#8216;only' Dual core XEON w/ 3.5Gb ram, and some random SATA drives, so the improvement should be huge :D
 
-I&#8217;m quite excited, because its going to be my first server ever without Apache and MySQL installed. Or well, atleast until some stupid customer or what not ([Biesbjerg][2]?) demands it <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley' />
+I'm quite excited, because its going to be my first server ever without Apache and MySQL installed.
 
-If I can find the time, I will write a guide on how I&#8217;m going to configure my server (Lighttpd, PostgreSQL, Dovecot + sendmail, quota, fast-cgi php5), it might be useful for someone <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley' />
+If I can find the time, I will write a guide on how I'm going to configure my server (Lighttpd, PostgreSQL, Dovecot + sendmail, quota, fast-cgi php5), it might be useful for someone ;)
 
-Let me know if it has any interest to you guys <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />
+Let me know if it has any interest to you guys :)
 
 ## Specs
 

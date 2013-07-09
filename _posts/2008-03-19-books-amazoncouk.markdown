@@ -5,7 +5,7 @@ layout: post
 categories:
   - Random
 ---
-Just got an email from Amazon.co.uk &#8211; the have shipped my new batch of dev-books <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />
+Just got an email from Amazon.co.uk &#8211; the have shipped my new batch of dev-books :)
 
 This time around it was more an impulze to buy some books, so I hope I will end up as satisfied as last time I purchased some books from them.
 
@@ -15,4 +15,4 @@ This time around it was more an impulze to buy some books, so I hope I will end 
 *   <a target="_blank" href="http://www.amazon.co.uk/exec/obidos/ASIN/0672327562">PostgreSQL (Developers Library)</a>
 *   <a target="_blank" href="http://www.amazon.co.uk/exec/obidos/ASIN/097584198X">The CSS Anthology: 101 Essential Tips, Tricks and Hacks</a>
 
-I will probably give a short review of the books once I have read them <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_wink.gif' alt=';)' class='wp-smiley' />
+I will probably give a short review of the books once I have read them ;)
