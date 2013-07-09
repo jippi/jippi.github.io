@@ -1,3 +1,6 @@
 url: http://www.cakephp.nu
 name: Cakephp.nu blog
 description: Cake and cookies by Jippi
+safe: true
+lsi: false
+pygments: true
