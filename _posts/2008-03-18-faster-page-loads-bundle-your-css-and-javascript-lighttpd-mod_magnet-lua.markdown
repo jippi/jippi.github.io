@@ -2,9 +2,6 @@
 title: 'Faster Page Loads &#8211; Bundle Your CSS and Javascript with lighttpd'
 author: Christian Winther
 layout: post
-permalink: /faster-page-loads-bundle-your-css-and-javascript-lighttpd-mod_magnet-lua
-old_slug:
-  - lighttpd-mod_magnet-written-lua-concat-script
 categories:
   - lighttpd
   - lua
@@ -13,7 +10,7 @@ Hello again,
 
 ### Preface
 
-This time I have been busy playing with <a target="_blank" href="http://www.lighttpd.net/">Lighttpd</a> and <a target="_blank" href="http://trac.lighttpd.net/trac/wiki/Docs:ModMagnet">mod_magnet</a>. I found <a target="_blank" href="http://nordisch.org/2007/4/10/hah-it-s-not-only-me">a blog post </a>where <a target="_blank" href="http://nordisch.org/">darix </a> mentions a post from sitepoint where they demostrate <a target="_blank" href="http://www.sitepoint.com/blogs/2007/04/10/faster-page-loads-bundle-your-css-and-javascript/">a technique to speed up the HTTP GET of javascript and CSS files</a>. 
+This time I have been busy playing with <a target="_blank" href="http://www.lighttpd.net/">Lighttpd</a> and <a target="_blank" href="http://trac.lighttpd.net/trac/wiki/Docs:ModMagnet">mod_magnet</a>. I found <a target="_blank" href="http://nordisch.org/2007/4/10/hah-it-s-not-only-me">a blog post </a>where <a target="_blank" href="http://nordisch.org/">darix </a> mentions a post from sitepoint where they demostrate <a target="_blank" href="http://www.sitepoint.com/blogs/2007/04/10/faster-page-loads-bundle-your-css-and-javascript/">a technique to speed up the HTTP GET of javascript and CSS files</a>.
 
 Its quite simple really, instead of doing
 
@@ -43,13 +40,13 @@ you simply do
 
 and then this script will automagic concat them together into one big file, and make lighty serve that one instead. (The same goes for javascript files, or anything really)
 
-This could save ALOT of HTTP GET&#8217;s to your server, and increase the overall loadtime and performance of your site alot, especially if you use alot of Web2.0 stuff <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> 
+This could save ALOT of HTTP GET&#8217;s to your server, and increase the overall loadtime and performance of your site alot, especially if you use alot of Web2.0 stuff <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />
 
-However, the Lua source for their script was not made public, so nobody could benifit from their otherwise impressive speed gains. <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_sad.gif' alt=':(' class='wp-smiley' /> 
+However, the Lua source for their script was not made public, so nobody could benifit from their otherwise impressive speed gains. <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_sad.gif' alt=':(' class='wp-smiley' />
 
-Until now.. or, well, almost &#8211; its not their script, but my own attempt to mimic what they did in pure <a target="_blank" href="http://www.lua.org/">Lua</a> <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> 
+Until now.. or, well, almost &#8211; its not their script, but my own attempt to mimic what they did in pure <a target="_blank" href="http://www.lua.org/">Lua</a> <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />
 
-I tried to keep the dependencies down to a minimum, however I decided to use one, md5.  
+I tried to keep the dependencies down to a minimum, however I decided to use one, md5.
 You can find the source <a target="_blank" href="http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/#lmd5">here</a> ([5.1][1], [5.0][2])
 
 ### Config
@@ -64,7 +61,7 @@ rootPath (Line 44)
 :   The path to look for the files to concat, default should be fine for most DOC\_ROOT/js and DOC\_ROOT/css
 
 concatRoot (Line 45)
-:   The folder to store the concated files, can be anywhere <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> 
+:   The folder to store the concated files, can be anywhere <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />
 
 ### Setup
 
@@ -74,7 +71,7 @@ concatRoot (Line 45)
 *   Restart lighttpd
 *   Modify your css/js links to utilize the new feature:)
 
-Optimal you can enable mod_compress aswell, bundle.lua works out of the box with any other lighttpd module you may have <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> 
+Optimal you can enable mod_compress aswell, bundle.lua works out of the box with any other lighttpd module you may have <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />
 
 ### Source
 
@@ -173,7 +170,7 @@ Optimal you can enable mod_compress aswell, bundle.lua works out of the box with
 87
 </pre>
       </td>
-      
+
       <td class="code">
         <pre class="lua" style="font-family:monospace;"><span style="color: #808080; font-style: italic;">--- get stat information on a path</span>
 <span style="color: #808080; font-style: italic;">-- @param path to stat</span>
@@ -190,7 +187,7 @@ Optimal you can enable mod_compress aswell, bundle.lua works out of the box with
 <span style="color: #808080; font-style: italic;">--- Wrapper for reading a full file into a string</span>
 <span style="color: #808080; font-style: italic;">-- @param filename Full path to the file</span>
 <span style="color: #808080; font-style: italic;">-- @return a string with the content of the file</span>
-<span style="color: #aa9900; font-weight: bold;">function</span> read_file<span style="color: #66cc66;">&#40;</span>filename<span style="color: #66cc66;">&#41;</span> 
+<span style="color: #aa9900; font-weight: bold;">function</span> read_file<span style="color: #66cc66;">&#40;</span>filename<span style="color: #66cc66;">&#41;</span>
     <span style="color: #aa9900; font-weight: bold;">local</span> content <span style="color: #66cc66;">=</span> <span style="color: #ff6666;">""</span>
     <span style="color: #aa9900; font-weight: bold;">if</span> file_info<span style="color: #66cc66;">&#40;</span>filename<span style="color: #66cc66;">,</span> <span style="color: #ff6666;">"is_file"</span><span style="color: #66cc66;">&#41;</span> <span style="color: #aa9900; font-weight: bold;">then</span>
         <span style="color: #aa9900; font-weight: bold;">local</span> file <span style="color: #66cc66;">=</span> <span style="color: #0000aa;">io.open</span><span style="color: #66cc66;">&#40;</span>filename<span style="color: #66cc66;">,</span> <span style="color: #ff6666;">"r"</span><span style="color: #66cc66;">&#41;</span>
@@ -203,7 +200,7 @@ Optimal you can enable mod_compress aswell, bundle.lua works out of the box with
 <span style="color: #808080; font-style: italic;">--- Wrapper for writeing content to a file</span>
 <span style="color: #808080; font-style: italic;">-- @param filename Full path to the destionation file</span>
 <span style="color: #808080; font-style: italic;">-- @param content The string to write</span>
-<span style="color: #aa9900; font-weight: bold;">function</span> write_cache<span style="color: #66cc66;">&#40;</span>filename<span style="color: #66cc66;">,</span> content<span style="color: #66cc66;">&#41;</span> 
+<span style="color: #aa9900; font-weight: bold;">function</span> write_cache<span style="color: #66cc66;">&#40;</span>filename<span style="color: #66cc66;">,</span> content<span style="color: #66cc66;">&#41;</span>
     <span style="color: #aa9900; font-weight: bold;">local</span> file <span style="color: #66cc66;">=</span> <span style="color: #0000aa;">io.open</span><span style="color: #66cc66;">&#40;</span>filename<span style="color: #66cc66;">,</span> <span style="color: #ff6666;">"w"</span><span style="color: #66cc66;">&#41;</span>
     file<span style="color: #66cc66;">:</span><span style="color: #0000aa;">write</span><span style="color: #66cc66;">&#40;</span>content<span style="color: #66cc66;">&#41;</span>
     <span style="color: #0000aa;">io.close</span><span style="color: #66cc66;">&#40;</span>file<span style="color: #66cc66;">&#41;</span>
@@ -214,7 +211,7 @@ Optimal you can enable mod_compress aswell, bundle.lua works out of the box with
 <span style="color: #808080; font-style: italic;">-- @param match The files that will be concat into a file</span>
 <span style="color: #808080; font-style: italic;">-- @param fileExtension Do !NOT! include the dot ( . )</span>
 <span style="color: #aa9900; font-weight: bold;">function</span> combine_files<span style="color: #66cc66;">&#40;</span>lighty<span style="color: #66cc66;">,</span> files<span style="color: #66cc66;">,</span> fileExtension<span style="color: #66cc66;">&#41;</span>
-    <span style="color: #0000aa;">require</span> <span style="color: #ff6666;">"md5"</span> 
+    <span style="color: #0000aa;">require</span> <span style="color: #ff6666;">"md5"</span>
 &nbsp;
     <span style="color: #aa9900; font-weight: bold;">local</span> charset       <span style="color: #66cc66;">=</span> <span style="color: #ff6666;">"; charset=utf-8"</span>
     <span style="color: #aa9900; font-weight: bold;">local</span> prefix        <span style="color: #66cc66;">=</span> <span style="color: #ff6666;">"cache-"</span>
@@ -227,7 +224,7 @@ Optimal you can enable mod_compress aswell, bundle.lua works out of the box with
         modTime <span style="color: #66cc66;">=</span> file_info<span style="color: #66cc66;">&#40;</span>fullPath<span style="color: #66cc66;">,</span> <span style="color: #ff6666;">"st_mtime"</span><span style="color: #66cc66;">&#41;</span>
         <span style="color: #aa9900; font-weight: bold;">if</span> <span style="color: #0000aa;">type</span><span style="color: #66cc66;">&#40;</span>modTime<span style="color: #66cc66;">&#41;</span> <span style="color: #66cc66;">==</span> <span style="color: #ff6666;">"number"</span> <span style="color: #aa9900; font-weight: bold;">then</span>
             lastModified <span style="color: #66cc66;">=</span> <span style="color: #0000aa;">math.max</span><span style="color: #66cc66;">&#40;</span>lastModified<span style="color: #66cc66;">,</span> modTime<span style="color: #66cc66;">&#41;</span>
-        <span style="color: #aa9900; font-weight: bold;">end</span>            
+        <span style="color: #aa9900; font-weight: bold;">end</span>
      <span style="color: #aa9900; font-weight: bold;">end</span>
 &nbsp;
      <span style="color: #aa9900; font-weight: bold;">local</span> hash <span style="color: #66cc66;">=</span> lastModified <span style="color: #66cc66;">..</span> <span style="color: #ff6666;">"-"</span> <span style="color: #66cc66;">..</span> md5<span style="color: #66cc66;">.</span>sumhexa<span style="color: #66cc66;">&#40;</span>files<span style="color: #66cc66;">&#41;</span>
@@ -257,10 +254,10 @@ Optimal you can enable mod_compress aswell, bundle.lua works out of the box with
         <span style="color: #aa9900; font-weight: bold;">return</span> combine_files<span style="color: #66cc66;">&#40;</span>lighty<span style="color: #66cc66;">,</span> css<span style="color: #66cc66;">,</span> <span style="color: #ff6666;">"css"</span><span style="color: #66cc66;">&#41;</span>
     <span style="color: #aa9900; font-weight: bold;">end</span>
 &nbsp;
-    js <span style="color: #66cc66;">=</span> <span style="color: #0000aa;">string</span><span style="color: #66cc66;">.</span>match<span style="color: #66cc66;">&#40;</span>lighty<span style="color: #66cc66;">.</span>env<span style="color: #66cc66;">&#91;</span><span style="color: #ff6666;">"physical.path"</span><span style="color: #66cc66;">&#93;</span><span style="color: #66cc66;">,</span> <span style="color: #ff6666;">"js/(.*\.js)"</span><span style="color: #66cc66;">&#41;</span>	    
+    js <span style="color: #66cc66;">=</span> <span style="color: #0000aa;">string</span><span style="color: #66cc66;">.</span>match<span style="color: #66cc66;">&#40;</span>lighty<span style="color: #66cc66;">.</span>env<span style="color: #66cc66;">&#91;</span><span style="color: #ff6666;">"physical.path"</span><span style="color: #66cc66;">&#93;</span><span style="color: #66cc66;">,</span> <span style="color: #ff6666;">"js/(.*\.js)"</span><span style="color: #66cc66;">&#41;</span>
 	<span style="color: #aa9900; font-weight: bold;">if</span> js <span style="color: #aa9900; font-weight: bold;">then</span>
         <span style="color: #aa9900; font-weight: bold;">return</span> combine_files<span style="color: #66cc66;">&#40;</span>lighty<span style="color: #66cc66;">,</span> js<span style="color: #66cc66;">,</span> <span style="color: #ff6666;">"js"</span><span style="color: #66cc66;">&#41;</span>
-	<span style="color: #aa9900; font-weight: bold;">end</span> 
+	<span style="color: #aa9900; font-weight: bold;">end</span>
 <span style="color: #aa9900; font-weight: bold;">end</span></pre>
       </td>
     </tr>

@@ -2,7 +2,6 @@
 title: 'CakePHP talk from FOSDEM &#8211; Free and Open Source Software Developers&#8217; European Meeting'
 author: Christian Winther
 layout: post
-permalink: /cakephp-talk-fosdem-free-open-source-software-developers-european-meeting
 categories:
   - Cakephp
 ---

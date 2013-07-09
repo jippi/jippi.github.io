@@ -2,11 +2,10 @@
 title: New books from amazon.co.uk
 author: Christian Winther
 layout: post
-permalink: /books-amazoncouk
 categories:
   - Random
 ---
-Just got an email from Amazon.co.uk &#8211; the have shipped my new batch of dev-books <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' /> 
+Just got an email from Amazon.co.uk &#8211; the have shipped my new batch of dev-books <img src='http://www.cakephp.nu/wp-includes/images/smilies/icon_smile.gif' alt=':)' class='wp-smiley' />
 
 This time around it was more an impulze to buy some books, so I hope I will end up as satisfied as last time I purchased some books from them.
 

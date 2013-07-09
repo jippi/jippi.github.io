@@ -2,7 +2,6 @@
 title: CakeFest website launched!
 author: Christian Winther
 layout: post
-permalink: /cakefest-website-launched
 categories:
   - Cakephp
 ---

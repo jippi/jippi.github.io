@@ -2,7 +2,6 @@
 title: Generic non-www to www (and vice versa) 301 redirect using .htaccess
 author: Biesbjerg
 layout: post
-permalink: /quick-tip-generic-nonwww-www-vice-versa-301-redirect-htaccess
 categories:
   - Cakephp
   - Uncategorized
