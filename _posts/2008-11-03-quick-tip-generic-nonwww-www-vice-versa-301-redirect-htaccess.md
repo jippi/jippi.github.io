@@ -1,0 +1,30 @@
+---
+title: Generic non-www to www (and vice versa) 301 redirect using .htaccess
+author: Biesbjerg
+layout: post
+permalink: /quick-tip-generic-nonwww-www-vice-versa-301-redirect-htaccess
+categories:
+  - Cakephp
+  - Uncategorized
+---
+## The problem:
+
+I&#8217;ve always hardcoded the domain name in my htaccess&#8217;es, requiring me to make changes each time I deploy a new website.
+
+## The solution:
+
+Behold, an alternate, generic method of redirecting non-www to www and www to non-www, requiring no changes between deployments!
+
+### Non-www to www
+
+<pre>RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule (.*) http://www.%{HTTP_HOST}/$1 [R=301,L]</pre>
+
+### www to non-www
+
+<pre>RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^/(.*)$ http://%1/$1 [R=301,L]</pre>
+
+### Bonus tip: Remove trailing slash from address line
+
+RewriteRule ^(.+)/$ http://%{HTTP_HOST}/$1 [R=301,L]
