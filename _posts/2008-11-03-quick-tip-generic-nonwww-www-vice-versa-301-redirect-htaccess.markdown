@@ -16,13 +16,17 @@ Behold, an alternate, generic method of redirecting non-www to www and www to no
 
 ### Non-www to www
 
-<pre>RewriteCond %{HTTP_HOST} !^www\.
-RewriteRule (.*) http://www.%{HTTP_HOST}/$1 [R=301,L]</pre>
+{% highlight text %}
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule (.*) http://www.%{HTTP_HOST}/$1 [R=301,L]
+{% endhighlight %}
 
 ### www to non-www
 
-<pre>RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^/(.*)$ http://%1/$1 [R=301,L]</pre>
+{% highlight text %}
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^/(.*)$ http://%1/$1 [R=301,L]
+{% endhighlight %}
 
 ### Bonus tip: Remove trailing slash from address line
 

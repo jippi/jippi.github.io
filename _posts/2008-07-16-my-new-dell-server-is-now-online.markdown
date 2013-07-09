@@ -6,7 +6,7 @@ categories:
   - news
   - Random
 ---
-Finally I got the good news from my [new hosting company][1]
+Finally I got the good news from my new hosting company[1]
 
 I can hardly wait to get it FreeBSD 7.0 installed on it and setup a nice vhost system with Lighttpd + PostgreSQL. It's gonna be awsome.
 The server I'm currently using is &#8216;only' Dual core XEON w/ 3.5Gb ram, and some random SATA drives, so the improvement should be huge :D
