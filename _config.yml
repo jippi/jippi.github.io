@@ -2,5 +2,21 @@ url: http://cakephp.nu
 name: CakePHP.nu blog
 description: Cake and cookies by Jippi
 
+exclude: [LICENSE, CNAME, README.md, .gitignore, _README, Gemfile, Gemfile.lock, Rakefile]
+
 tag_page_layout: tag
 tag_page_dir: tag
+
+theme:
+  highlight_color: '#3498db'
+
+  name: "CakePHP.nu"
+  email: "jippignu@gmail.com"
+  tagline: "There will be cake"
+
+  google_analytics_key: "UA-42609077-1"
+
+  show_disclaimer: true
+  social:
+    github: "jippi"
+    twitter: "jippi"
