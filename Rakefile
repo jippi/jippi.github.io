@@ -1,5 +1,7 @@
 desc "Commit _site/"
 task :commit do
+  system("git checkout develop")
+
   puts "\n## Staging modified files"
   status = system("git add -A")
   puts status ? "Success" : "Failed"
@@ -10,10 +12,14 @@ task :commit do
   puts "\n## Pushing commits to remote"
   status = system("git push origin source")
   puts status ? "Success" : "Failed"
+
+  system("git checkout develop")
 end
 
 desc "Deploy _site/ to master branch"
 task :deploy do
+  system("git checkout develop")
+
   puts "\n## Deleting master branch"
   status = system("git branch -D master")
   puts status ? "Success" : "Failed"
@@ -29,6 +35,8 @@ task :deploy do
   puts "\n## Pushing all branches to origin"
   status = system("git push --all origin")
   puts status ? "Success" : "Failed"
+
+  system("git checkout develop")
 end
 
 desc "Commit and deploy _site/"
