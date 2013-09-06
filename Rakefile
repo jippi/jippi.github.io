@@ -1,6 +1,8 @@
 desc "Commit _site/"
 task :commit do
-  system("git checkout develop")
+  puts "\n## Checking out develop"
+  status = system("git checkout -q develop")
+  puts status ? "Success" : "Failed"
 
   puts "\n## jekyll build"
   status = system("jekyll build")
@@ -17,7 +19,7 @@ task :commit do
   puts status ? "Success" : "Failed"
 
   puts "\n## Pushing commits to remote"
-  status = system("git push origin develop")
+  status = system("git push -q origin develop")
   puts status ? "Success" : "Failed"
 
   system("git checkout develop")
@@ -38,7 +40,7 @@ task :deploy do
   puts status ? "Success" : "Failed"
 
   puts "\n## Forcing the _site subdirectory to be project root"
-  status = system("git filter-branch -q --subdirectory-filter _site/ -f")
+  status = system("git filter-branch --subdirectory-filter _site/ -f")
   puts status ? "Success" : "Failed"
 
   puts "\n## Switching back to develop branch"
