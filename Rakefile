@@ -35,8 +35,8 @@ task :deploy do
   status = system("git filter-branch --subdirectory-filter _site/ -f")
   puts status ? "Success" : "Failed"
 
-  puts "\n## Switching back to source branch"
-  status = system("git checkout source")
+  puts "\n## Switching back to develop branch"
+  status = system("git checkout develop")
   puts status ? "Success" : "Failed"
 
   puts "\n## Pushing all branches to origin"
