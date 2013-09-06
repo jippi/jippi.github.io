@@ -2,9 +2,10 @@
 title: CakeFest website launched!
 author: Christian Winther
 layout: post
-categories:
-  - Cakephp
+tags:
+  - CakePHP
 ---
+
 Just in on google group &#8211; the cake fest website has been launched.
 
 <a target="_blank" href="http://www.cakefest.org/">Head over to the cakefest website and join the fun</a>

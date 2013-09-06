@@ -2,13 +2,12 @@
 title: 'open_basedir will slow you down &#8211; security vs. speed'
 author: Christian Winther
 layout: post
-old_slug:
-  - openbasedir-slow-security-speed
-categories:
+tags:
   - lighttpd
   - Random
 ---
-Just a quickie.
+
+Just a quickie on lighttpd and open_basedir.
 
 I’m working on some security enhancements for my new website project, and in that progress, I have moved away from Apache2.2.3 and now using Lighttpd instead. Lighttpd does not use the same method of invoking php as apache does (mod_php vs. fast-cgi php).
 

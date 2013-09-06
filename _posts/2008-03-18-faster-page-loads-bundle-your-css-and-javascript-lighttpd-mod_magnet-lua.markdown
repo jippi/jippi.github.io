@@ -2,11 +2,12 @@
 title: 'Faster Page Loads &#8211; Bundle Your CSS and Javascript with lighttpd'
 author: Christian Winther
 layout: post
-categories:
+tags:
   - lighttpd
   - lua
 ---
-Hello again,
+
+Hello again, lets talk Lighttpd & LUA
 
 ### Preface
 

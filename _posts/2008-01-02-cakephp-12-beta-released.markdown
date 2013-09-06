@@ -2,12 +2,11 @@
 title: CakePHP 1.2 beta has been released
 author: Christian Winther
 layout: post
-categories:
-  - Cakephp
+tags:
+  - CakePHP
 ---
-Finally it happened !
 
-**CakePHP 1.2 beta** has been released.
+Finally it happened ! **CakePHP 1.2 beta** has been released.
 
 Some of the new stuff includes:
 

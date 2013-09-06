@@ -1,0 +1,26 @@
+---
+title: 'CakeFest 2013, my talks'
+author: Christian Winther
+layout: post
+tags:
+  - CakePHP
+  - CakeFest
+  - Crud
+  - Scaling
+---
+
+The slides for my 3 talks at CakeFest 2013 are now online
+
+## [Scaling CakePHP](http://friendsofcake.com/presentations/cakefest-2013/scaling-cakephp)
+
+A talk on scaling CakePHP. It got surprisingly little to do with CakePHP, but with PHP and the underlying infrastructure.
+
+## [Crud - Application Development on steroids](http://friendsofcake.com/crud/presentations/jippi-cakefest-2013/)
+
+Talk on [CRUD](https://github.com/friendsofcake/crud). Describing the pro and cons with bake, scaffolding and CRUD.
+
+## [Friends Of Cake](http://friendsofcake.com/presentations/cakefest-2013/friends-of-cake/)
+
+I presented the vision for [Friends Of Cake](http://friendsofcake.com/) and what we want to achieve with the project and how it can benefit the CakePHP community.
+
+__Pro tip__: press "s" to see my speaker notes

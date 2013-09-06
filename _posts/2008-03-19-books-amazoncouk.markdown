@@ -2,7 +2,7 @@
 title: New books from amazon.co.uk
 author: Christian Winther
 layout: post
-categories:
+tags:
   - Random
 ---
 Just got an email from Amazon.co.uk &#8211; the have shipped my new batch of dev-books :)

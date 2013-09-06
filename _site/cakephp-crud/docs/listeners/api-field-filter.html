@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Api Field Filter - jippi/cakephp-crud</title>
+
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <meta http-equiv="refresh" content="5; url=http://friendsofcake.com/crud//docs/listeners/api-field-filter.html">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="http://cakephp.nu/cakephp-crud/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+
+    <link href="http://cakephp.nu/cakephp-crud/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="http://cakephp.nu/cakephp-crud/css/highlight.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://cakephp.nu/cakephp-crud/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  	<div class="alert alert-block">
+		  <h4>NOTICE!</h4>
+  		This is an archived copy of CRUD, development continues at <a href="http://friendsofcake.com/">Friends Of Cake</a>.<br />
+  		<br />
+  		Please go to <a href="http://friendsofcake.com/crud">the new website</a> for up to date documentation<br />
+  		<br />
+  		You will automatically be redirected in 5 seconds
+		</div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="http://cakephp.nu/cakephp-crud/">jippi/cakephp-crud</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+
+            </p>
+            <ul class="nav">
+              <li class="active"><a href="http://cakephp.nu/cakephp-crud/">Home</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/docs/">Documentation</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/examples/">Examples</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/docs/views/wish-list.html">View</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/docs/todo.html">TODO</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/api/develop">API documentation</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Getting started</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/">Introduction</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/installation.html">Installation</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/configuration.html">Configuration</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/conventions.html">Conventions</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/events.html">Events</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/unit-testing.html">Unit Testing</a></li>
+              <li class="nav-header">Actions</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/index.html">Index</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/add.html">Add</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/edit.html">Edit</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/view.html">View</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/delete.html">Delete</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/custom.html">Custom</a></li>
+              <li class="nav-header">Listeners</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/intro.html">Introduction</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/debug-kit.html">Debug Kit</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/related-models.html">Related Models</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/scaffold.html">Scaffold</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/custom.html">Custom listeners</a></li>
+              <li class="nav-header">API listeners</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/api.html">Api</a></li>
+              <li class="active"><a href="http://cakephp.nu/cakephp-crud/docs/listeners/api-field-filter.html">Api Field Filter</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/api-pagination.html">Api Pagination</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/api-query-log.html">Api Query Log</a></li>
+              <li class="nav-header">Examples</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/examples/blog.html">Blog tutorial</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div>
+        <div class="span9">
+          <div class="toc hide">...toc....</div>
+          <h1 id='field_filter_listener'>Field Filter Listener</h1>
+
+<p>Allow the requester to decide what fields and relations that should be returned by providing a <code>fields</code> GET argument with a comma separated list of fields.</p>
+
+<p>Example: <code>http://example.com/blogs.json?fields=Blog.id,Blog.name,Post.id,Post.name,Post.created</code></p>
+
+<h1 id='setup'>Setup</h1>
+
+<p>This feature requires the <a href='http://cakephp.nu/cakephp-crud/docs/listeners/api.html'>Api listener</a> to work</p>
+
+<h2 id='attach_it_on_the_fly_in_your_controller_'>Attach it on the fly in your controller <code>beforeFilter</code></h2>
+
+<p>This is recommended if you want to attach it only to specific controllers and actions</p>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+<span class='k'>class</span> <span class='nc'>SamplesController</span> <span class='k'>extends</span> <span class='nx'>AppController</span> <span class='p'>{</span>
+
+  <span class='k'>public</span> <span class='k'>function</span> <span class='nf'>beforeFilter</span><span class='p'>()</span> <span class='p'>{</span>
+    <span class='c1'>// Also requires the API listener</span>
+    <span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>addListener</span><span class='p'>(</span><span class='s1'>&#39;Api&#39;</span><span class='p'>);</span>
+    <span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>addListener</span><span class='p'>(</span><span class='s1'>&#39;ApiFieldFilter&#39;</span><span class='p'>);</span>
+
+    <span class='k'>parent</span><span class='o'>::</span><span class='na'>beforeFilter</span><span class='p'>();</span>
+  <span class='p'>}</span>
+<span class='p'>}</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+<h2 id='attach_it_using_components_array'>Attach it using components array</h2>
+
+<p>This is recommended if you want to attach it to all controllers, application wide</p>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+<span class='k'>class</span> <span class='nc'>SamplesController</span> <span class='k'>extends</span> <span class='nx'>AppController</span> <span class='p'>{</span>
+
+  <span class='k'>public</span> <span class='nv'>$components</span> <span class='o'>=</span> <span class='p'>[</span>
+    <span class='s1'>&#39;RequestHandler&#39;</span><span class='p'>,</span>
+    <span class='s1'>&#39;Crud.Crud&#39;</span> <span class='o'>=&gt;</span> <span class='p'>[</span>
+      <span class='s1'>&#39;actions&#39;</span> <span class='o'>=&gt;</span> <span class='p'>[</span><span class='s1'>&#39;index&#39;</span><span class='p'>,</span> <span class='s1'>&#39;view&#39;</span><span class='p'>],</span>
+      <span class='s1'>&#39;listeners&#39;</span> <span class='o'>=&gt;</span> <span class='p'>[</span>
+        <span class='c1'>// Also requires the API listener</span>
+        <span class='s1'>&#39;Api&#39;</span><span class='p'>,</span>
+        <span class='s1'>&#39;ApiFieldFilter&#39;</span>
+      <span class='p'>]</span>
+    <span class='p'>];</span>
+
+<span class='p'>}</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+<h1 id='configuration'>Configuration</h1>
+
+<h2 id='allow_no_filter'>Allow no filter</h2>
+
+<p>By default when the listener is enabled, it will refuse requests without a <code>fields</code> key in the request</p>
+
+<p>This behavior can be changed</p>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+<span class='c1'>// Allow request without ?fields=</span>
+<span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>listener</span><span class='p'>(</span><span class='s1'>&#39;ApiFieldFilter&#39;</span><span class='p'>)</span><span class='o'>-&gt;</span><span class='na'>allowNoFilter</span><span class='p'>(</span><span class='k'>true</span><span class='p'>);</span>
+
+<span class='c1'>// Reject requests without ?fields=</span>
+<span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>listener</span><span class='p'>(</span><span class='s1'>&#39;ApiFieldFilter&#39;</span><span class='p'>)</span><span class='o'>-&gt;</span><span class='na'>allowNoFilter</span><span class='p'>(</span><span class='k'>false</span><span class='p'>);</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+<h2 id='whitelist_fields'>Whitelist fields</h2>
+
+<p>You can whitelist fields, if no whitelist exist for fields, all fields are allowed by default.</p>
+
+<p>If whitelisting exist, only those fields will be allowed to be selected.</p>
+
+<p>The fields must be in <code>Model.field</code> format</p>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+<span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>listener</span><span class='p'>(</span><span class='s1'>&#39;ApiFieldFilter&#39;</span><span class='p'>)</span><span class='o'>-&gt;</span><span class='na'>whitelistFields</span><span class='p'>([</span><span class='s1'>&#39;Model.id&#39;</span><span class='p'>,</span> <span class='s1'>&#39;Model.name&#39;</span><span class='p'>,</span> <span class='s1'>&#39;Model.created&#39;</span><span class='p'>]);</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+<h2 id='blacklist_fields'>Blacklist fields</h2>
+
+<p>If no blacklist exist, no blacklisting is done</p>
+
+<p>If blacklisting exist, the field will be removed from the field list if present in the <code>field</code> query argument</p>
+
+<p>The fields must be in <code>Model.field</code> format</p>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+<span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>listener</span><span class='p'>(</span><span class='s1'>&#39;ApiFieldFilter&#39;</span><span class='p'>)</span><span class='o'>-&gt;</span><span class='na'>blacklistFields</span><span class='p'>([</span><span class='s1'>&#39;Model.password&#39;</span><span class='p'>,</span> <span class='s1'>&#39;Model.auth_token&#39;</span><span class='p'>,</span> <span class='s1'>&#39;Model.created&#39;</span><span class='p'>]);</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+<h2 id='whitelist_models'>Whitelist models</h2>
+
+<p>For any model relation automatically to be joined, it has to be whitelisted first.</p>
+
+<p>If no whitelist exist, no relations will be added automatically</p>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+<span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>listener</span><span class='p'>(</span><span class='s1'>&#39;ApiFieldFilter&#39;</span><span class='p'>)</span><span class='o'>-&gt;</span><span class='na'>whitelistModels</span><span class='p'>([</span><span class='s1'>&#39;list&#39;</span><span class='p'>,</span> <span class='s1'>&#39;of&#39;</span><span class='p'>,</span> <span class='s1'>&#39;models&#39;</span><span class='p'>]);</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+<h1 id='limitations'>Limitations</h1>
+
+<p>Related models is only supported in 1 level away from the primary model at this time. E.g. &#8220;Blog&#8221; =&gt; Auth, Tag, Posts</p>
+
+					<br />
+<hr />
+<br />
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'cakephpnu';
+    var disqus_url = 'http://cakephp.nu/cakephp-crud/docs/listeners/api-field-filter.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        </div>
+      </div><!--/row-->
+
+      <hr />
+
+      <footer>
+        <p>&copy; Christian Winther 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://cakephp.nu/cakephp-crud/js/toc.js"></script>
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42609077-1', 'cakephp.nu');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>

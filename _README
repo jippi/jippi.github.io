@@ -1,0 +1,14 @@
+ruby: http://sam.roon.io/how-to-install-ruby-193
+
+```
+brew update
+brew install rbenv
+brew install ruby-build
+rbenv install 1.9.3-p125
+rbenv local 1.9.3-p125 # for each dir
+rbenv rehash # reload
+gem install bundle # install bundle
+bundle install
+```
+
+rbenv: https://github.com/sstephenson/rbenv#readme

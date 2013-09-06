@@ -2,7 +2,7 @@
 title: 'Yay! my dell new server is now online :D'
 author: Christian Winther
 layout: post
-categories:
+tags:
   - news
   - Random
 ---

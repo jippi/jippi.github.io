@@ -2,11 +2,9 @@
 title: Generic non-www to www (and vice versa) 301 redirect using .htaccess
 author: Biesbjerg
 layout: post
-categories:
-  - Cakephp
-  - Uncategorized
+tags:
+  - CakePHP
 ---
-## The problem:
 
 I&#8217;ve always hardcoded the domain name in my htaccess&#8217;es, requiring me to make changes each time I deploy a new website.
 
