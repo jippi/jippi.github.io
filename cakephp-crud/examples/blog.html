@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Examples - Blog - jippi/cakephp-crud</title>
+
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <meta http-equiv="refresh" content="5; url=http://friendsofcake.com/crud//examples/blog.html">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="http://cakephp.nu/cakephp-crud/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+
+    <link href="http://cakephp.nu/cakephp-crud/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="http://cakephp.nu/cakephp-crud/css/highlight.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://cakephp.nu/cakephp-crud/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  	<div class="alert alert-block">
+		  <h4>NOTICE!</h4>
+  		This is an archived copy of CRUD, development continues at <a href="http://friendsofcake.com/">Friends Of Cake</a>.<br />
+  		<br />
+  		Please go to <a href="http://friendsofcake.com/crud">the new website</a> for up to date documentation<br />
+  		<br />
+  		You will automatically be redirected in 5 seconds
+		</div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="http://cakephp.nu/cakephp-crud/">jippi/cakephp-crud</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+
+            </p>
+            <ul class="nav">
+              <li class="active"><a href="http://cakephp.nu/cakephp-crud/">Home</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/docs/">Documentation</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/examples/">Examples</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/docs/views/wish-list.html">View</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/docs/todo.html">TODO</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/api/develop">API documentation</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Getting started</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/">Introduction</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/installation.html">Installation</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/configuration.html">Configuration</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/conventions.html">Conventions</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/events.html">Events</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/unit-testing.html">Unit Testing</a></li>
+              <li class="nav-header">Actions</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/index.html">Index</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/add.html">Add</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/edit.html">Edit</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/view.html">View</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/delete.html">Delete</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/custom.html">Custom</a></li>
+              <li class="nav-header">Listeners</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/intro.html">Introduction</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/debug-kit.html">Debug Kit</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/related-models.html">Related Models</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/scaffold.html">Scaffold</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/custom.html">Custom listeners</a></li>
+              <li class="nav-header">API listeners</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/api.html">Api</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/api-field-filter.html">Api Field Filter</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/api-pagination.html">Api Pagination</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/api-query-log.html">Api Query Log</a></li>
+              <li class="nav-header">Examples</li>
+              <li class="active"><a href="http://cakephp.nu/cakephp-crud/examples/blog.html">Blog tutorial</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div>
+        <div class="span9">
+          <div class="toc hide">...toc....</div>
+          <h1 id='introduction'>Introduction</h1>
+
+<p>This is a Crud version of the cakephp blog tutorial <a href='http://book.cakephp.org/2.0/en/tutorials-and-examples/blog/blog.html'>part one</a> and <a href='http://book.cakephp.org/2.0/en/tutorials-and-examples/blog/part-two.html'>part two</a></p>
+
+<p>It&#8217;s meant to show that everything the example does in Controller is done automatically by Crud, and that it even provides a more flexible and robust solution.</p>
+
+<p>This example is not meant to be a introduction to cakephp, but more an easy way to compare bake &amp; hand-crafted code vs. crud.</p>
+
+<p>This is obviously a very simple example, and doesn&#8217;t showcase all the features of Crud.</p>
+
+<p>Please dive into the <a href='http://cakephp.nu/cakephp-crud/docs/'>documentation</a> for more information.</p>
+
+<h1 id='installation__configuration'>Installation &amp; Configuration</h1>
+
+<p>Please follow the <a href='http://cakephp.nu/cakephp-crud/docs/installation.html'>installation guidelines</a> on how to get the Crud plugin</p>
+
+<p>Add the following to your <code>AppController.php</code> (php5.4) or follow the <a href='http://cakephp.nu/cakephp-crud/docs/installation.html'>installation guidelines</a> for alternative installation methods.</p>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+<span class='nx'>App</span><span class='o'>::</span><span class='na'>uses</span><span class='p'>(</span><span class='s1'>&#39;Controller&#39;</span><span class='p'>,</span> <span class='s1'>&#39;Controller&#39;</span><span class='p'>);</span>
+<span class='nx'>App</span><span class='o'>::</span><span class='na'>uses</span><span class='p'>(</span><span class='s1'>&#39;CrudControllerTrait&#39;</span><span class='p'>,</span> <span class='s1'>&#39;Crud.Lib&#39;</span><span class='p'>);</span>
+
+<span class='k'>class</span> <span class='nc'>AppController</span> <span class='k'>extends</span> <span class='nx'>Controller</span> <span class='p'>{</span>
+	<span class='k'>use</span> <span class='nx'>CrudControllerTrait</span><span class='p'>;</span>
+
+	<span class='k'>public</span> <span class='nv'>$components</span> <span class='o'>=</span> <span class='k'>array</span><span class='p'>(</span>
+		<span class='s1'>&#39;Crud.Crud&#39;</span> <span class='o'>=&gt;</span> <span class='k'>array</span><span class='p'>(</span>
+		 	<span class='s1'>&#39;actions&#39;</span> <span class='o'>=&gt;</span> <span class='k'>array</span><span class='p'>(</span>
+				<span class='s1'>&#39;index&#39;</span><span class='p'>,</span> <span class='s1'>&#39;add&#39;</span><span class='p'>,</span> <span class='s1'>&#39;edit&#39;</span><span class='p'>,</span> <span class='s1'>&#39;view&#39;</span><span class='p'>,</span> <span class='s1'>&#39;delete&#39;</span>
+			<span class='p'>)</span>
+		<span class='p'>)</span>
+	<span class='p'>);</span>
+
+<span class='p'>}</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+<h1 id='basic_tutorial'>Basic tutorial</h1>
+
+<p>This part covers the basic introductional blog example, nothing more, nothing less</p>
+
+<h2 id='initialize_the_database'>Initialize the database</h2>
+
+<p>Create a table with some sample data with the following sql:</p>
+<div class='highlight'><pre><code class='sql'><span class='k'>CREATE</span> <span class='k'>TABLE</span> <span class='n'>posts</span> <span class='p'>(</span>
+    <span class='n'>id</span> <span class='nb'>INT</span> <span class='n'>UNSIGNED</span> <span class='n'>AUTO_INCREMENT</span> <span class='k'>PRIMARY</span> <span class='k'>KEY</span><span class='p'>,</span>
+    <span class='n'>title</span> <span class='nb'>VARCHAR</span><span class='p'>(</span><span class='mi'>50</span><span class='p'>),</span>
+    <span class='n'>body</span> <span class='nb'>TEXT</span><span class='p'>,</span>
+    <span class='n'>created</span> <span class='n'>DATETIME</span> <span class='k'>DEFAULT</span> <span class='k'>NULL</span><span class='p'>,</span>
+    <span class='n'>modified</span> <span class='n'>DATETIME</span> <span class='k'>DEFAULT</span> <span class='k'>NULL</span>
+<span class='p'>);</span>
+
+<span class='cm'>/* Then insert some posts for testing: */</span>
+<span class='k'>INSERT</span> <span class='k'>INTO</span> <span class='n'>posts</span> <span class='p'>(</span><span class='n'>title</span><span class='p'>,</span><span class='n'>body</span><span class='p'>,</span><span class='n'>created</span><span class='p'>)</span>
+    <span class='k'>VALUES</span> <span class='p'>(</span><span class='s1'>&#39;The title&#39;</span><span class='p'>,</span> <span class='s1'>&#39;This is the post body.&#39;</span><span class='p'>,</span> <span class='n'>NOW</span><span class='p'>());</span>
+<span class='k'>INSERT</span> <span class='k'>INTO</span> <span class='n'>posts</span> <span class='p'>(</span><span class='n'>title</span><span class='p'>,</span><span class='n'>body</span><span class='p'>,</span><span class='n'>created</span><span class='p'>)</span>
+    <span class='k'>VALUES</span> <span class='p'>(</span><span class='s1'>&#39;A title once again&#39;</span><span class='p'>,</span> <span class='s1'>&#39;And the post body follows.&#39;</span><span class='p'>,</span> <span class='n'>NOW</span><span class='p'>());</span>
+<span class='k'>INSERT</span> <span class='k'>INTO</span> <span class='n'>posts</span> <span class='p'>(</span><span class='n'>title</span><span class='p'>,</span><span class='n'>body</span><span class='p'>,</span><span class='n'>created</span><span class='p'>)</span>
+    <span class='k'>VALUES</span> <span class='p'>(</span><span class='s1'>&#39;Title strikes back&#39;</span><span class='p'>,</span> <span class='s1'>&#39;This is really exciting! Not.&#39;</span><span class='p'>,</span> <span class='n'>NOW</span><span class='p'>());</span>
+</code></pre></div>
+<h2 id='post_model'>Post Model</h2>
+
+<p>Create <code>app/Model/Post.php</code></p>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+<span class='k'>class</span> <span class='nc'>Post</span> <span class='k'>extends</span> <span class='nx'>AppModel</span> <span class='p'>{</span>
+    <span class='k'>public</span> <span class='nv'>$validate</span> <span class='o'>=</span> <span class='k'>array</span><span class='p'>(</span>
+        <span class='s1'>&#39;title&#39;</span> <span class='o'>=&gt;</span> <span class='k'>array</span><span class='p'>(</span>
+            <span class='s1'>&#39;rule&#39;</span> <span class='o'>=&gt;</span> <span class='s1'>&#39;notEmpty&#39;</span>
+        <span class='p'>),</span>
+        <span class='s1'>&#39;body&#39;</span> <span class='o'>=&gt;</span> <span class='k'>array</span><span class='p'>(</span>
+            <span class='s1'>&#39;rule&#39;</span> <span class='o'>=&gt;</span> <span class='s1'>&#39;notEmpty&#39;</span>
+        <span class='p'>)</span>
+    <span class='p'>);</span>
+<span class='p'>}</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+<h2 id='post_controller'>Post Controller</h2>
+
+<p>Create <code>app/Controller/PostsController.php</code></p>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+
+<span class='nx'>App</span><span class='o'>::</span><span class='na'>uses</span><span class='p'>(</span><span class='s1'>&#39;AppController&#39;</span><span class='p'>,</span> <span class='s1'>&#39;Controller&#39;</span><span class='p'>);</span>
+
+<span class='k'>class</span> <span class='nc'>PostsController</span> <span class='k'>extends</span> <span class='nx'>AppController</span> <span class='p'>{</span>
+
+<span class='p'>}</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+<h2 id='post_views'>Post Views</h2>
+
+<p>Since Crud is bake compatible, we can just bake the views:</p>
+
+<p><code>Console/cake bake view Post --public</code></p>
+
+<h2 id='done'>Done</h2>
+
+<p>That was it.. the 15 minute blog tutorial done with Crud.</p>
+
+<p>Obviously there isn&#8217;t a huge win in this small example, but read on and see how much awesome features Crud can provide.</p>
+
+<p>Read on and lets add a API layer on top of our new Blog.</p>
+
+<h1 id='adding_api'>Adding API</h1>
+
+<p>Since our new blog is super webscale, and we want people to be able to consume our content through a nice API we want to add some JSON and XML response formats.</p>
+
+<h2 id='route_configuration'>Route configuration</h2>
+
+<p>We need to tell CakePHP router that we want to <a href='http://book.cakephp.org/2.0/en/development/routing.html#file-extensions'>handle JSON and XML extensions</a></p>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+<span class='nx'>Router</span><span class='o'>::</span><span class='na'>parseExtensions</span><span class='p'>(</span><span class='s1'>&#39;json&#39;</span><span class='p'>,</span> <span class='s1'>&#39;xml&#39;</span><span class='p'>);</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+<h2 id='modify_appcontroller'>Modify AppController</h2>
+
+<p>We need to attach the <a href='http://book.cakephp.org/2.0/en/core-libraries/components/request-handling.html'>cakephp request handler</a> and the <a href='http://cakephp.nu/cakephp-crud/docs/listeners/api.html'>crud api listener</a> by modifying the <code>AppController::$components</code> array</p>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+<span class='k'>public</span> <span class='nv'>$components</span> <span class='o'>=</span> <span class='k'>array</span><span class='p'>(</span>
+	<span class='s1'>&#39;RequestHandler&#39;</span><span class='p'>,</span> <span class='c1'>// &lt;- new</span>
+	<span class='s1'>&#39;Crud.Crud&#39;</span> <span class='o'>=&gt;</span> <span class='k'>array</span><span class='p'>(</span>
+	 	<span class='s1'>&#39;actions&#39;</span> <span class='o'>=&gt;</span> <span class='k'>array</span><span class='p'>(</span>
+			<span class='s1'>&#39;index&#39;</span><span class='p'>,</span> <span class='s1'>&#39;add&#39;</span><span class='p'>,</span> <span class='s1'>&#39;edit&#39;</span><span class='p'>,</span> <span class='s1'>&#39;view&#39;</span><span class='p'>,</span> <span class='s1'>&#39;delete&#39;</span>
+		<span class='p'>),</span>
+		<span class='s1'>&#39;listeners&#39;</span> <span class='o'>=&gt;</span> <span class='k'>array</span><span class='p'>(</span> <span class='c1'>// &lt;- new</span>
+			<span class='s1'>&#39;api&#39;</span> <span class='o'>=&gt;</span> <span class='s1'>&#39;Crud.Api&#39;</span>
+		<span class='p'>)</span>
+	<span class='p'>)</span>
+<span class='p'>);</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+<p>And thats its.. we now got a nice REST api for our posts controller, or any other controller your application could have.</p>
+
+<h2 id='using_the_new_api'>Using the new API</h2>
+
+<p>Reading posts in XML or JSON is as easy as using http://your-site-domain.com/posts.xml for XML or http://your-site-domain.com/posts.json for JSON</p>
+
+<h3 id='json_api'>JSON API</h3>
+
+<p>By adding &#8216;.json&#8217; to your URLs CakePHP and Crud will make sure that all responses is in JSON</p>
+
+<h4 id='list_posts'>List posts</h4>
+
+<p>Simply request <code>/posts.json</code> and you will get a list of posts in JSON format.</p>
+<div class='highlight'><pre><code class='text'>curl -I -X GET http://your-site-domain.com/posts.json
+</code></pre></div>
+<h4 id='add_post'>Add post</h4>
+
+<p>Simply POST to <code>/posts/add.json</code></p>
+<div class='highlight'><pre><code class='text'>curl -I -X POST http://your-site-domain.com/posts/add.json \
+	-d title=&quot;My new JSON API blog post&quot; \
+	-d body=&quot;With an epic body&quot;
+
+HTTP/1.1 201 Created
+Server: nginx/1.4.1
+Date: Sun, 16 Jun 2013 12:17:12 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 43
+Connection: keep-alive
+Set-Cookie: CAKEPHP=qp2dpvkpkqqk81mdn3iajdals2; expires=Sun, 16-Jun-2013 16:17:12 GMT; path=/; HttpOnly
+Location: http://crud.local.bownty.net/posts/view/5
+
+{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;Post&quot;: {
+      &quot;id&quot;: &quot;5&quot;
+    }
+  }
+}
+</code></pre></div>
+<h4 id='validation_errors'>Validation errors</h4>
+
+<p>Example on how validation errors in JSON looks</p>
+
+<p>In this example, I left out the <code>body</code> field</p>
+<div class='highlight'><pre><code class='text'>curl -I -X POST http://your-site-domain.com/posts/add.json \
+	-d title=&quot;My new JSON API blog post&quot;
+
+HTTP/1.1 400 Bad Request
+Server: nginx/1.4.1
+Date: Sun, 16 Jun 2013 12:25:12 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 69
+Connection: keep-alive
+Set-Cookie: CAKEPHP=vevclsl2o6r7h4v7uon9j5tkd1; expires=Sun, 16-Jun-2013 16:25:12 GMT; path=/; HttpOnly
+
+{
+  &quot;success&quot;: false,
+  &quot;data&quot;: {
+    &quot;body&quot;: [&quot;This field cannot be left blank&quot;]
+  }
+}
+</code></pre></div>
+<h3 id='xml_api'>XML API</h3>
+
+<p>By adding &#8216;.xml&#8217; to your URLs CakePHP and Crud will make sure that all responses is in XML</p>
+
+<h4 id='list_posts'>List posts</h4>
+
+<p>Simply request <code>/posts.xml</code> and you will get a list of posts in XML format.</p>
+<div class='highlight'><pre><code class='text'>curl -I -X GET http://your-site-domain.com/posts.xml
+</code></pre></div>
+<h4 id='add_post'>Add post</h4>
+
+<p>Simply POST to <code>/posts/add.xml</code></p>
+<div class='highlight'><pre><code class='text'>curl -I -X POST http://your-site-domain.com/posts/add.xml \
+	-d title=&quot;My new XML API blog post&quot; \
+	-d body=&quot;With an epic body&quot;
+
+HTTP/1.1 201 Created
+Server: nginx/1.4.1
+Date: Sun, 16 Jun 2013 12:17:12 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 43
+Connection: keep-alive
+Set-Cookie: CAKEPHP=qp2dpvkpkqqk81mdn3iajdals2; expires=Sun, 16-Jun-2013 16:17:12 GMT; path=/; HttpOnly
+Location: http://crud.local.bownty.net/posts/view/5
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;response&gt;
+  &lt;success&gt;1&lt;/success&gt;
+  &lt;data&gt;
+    &lt;Post&gt;
+      &lt;id&gt;6&lt;/id&gt;
+    &lt;/Post&gt;
+  &lt;/data&gt;
+&lt;/response&gt;
+</code></pre></div>
+<h4 id='validation_errors'>Validation errors</h4>
+
+<p>Example on how validation errors in XML looks</p>
+
+<p>In this example, I left out the <code>body</code> field</p>
+<div class='highlight'><pre><code class='text'>curl -I -X POST http://your-site-domain.com/posts/add.xml \
+	-d title=&quot;My new XML API blog post&quot; \
+
+HTTP/1.1 400 Bad Request
+Server: nginx/1.4.1
+Date: Sun, 16 Jun 2013 12:27:44 GMT
+Content-Type: application/xml; charset=UTF-8
+Content-Length: 138
+Connection: keep-alive
+Set-Cookie: CAKEPHP=3i5p02o6ove6dhohmb11acq765; expires=Sun, 16-Jun-2013 16:27:44 GMT; path=/; HttpOnly
+
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;response&gt;
+	&lt;success&gt;0&lt;/success&gt;
+	&lt;data&gt;
+		&lt;body&gt;This field cannot be left blank&lt;/body&gt;
+	&lt;/data&gt;
+&lt;/response&gt;
+</code></pre></div>
+
+					<br />
+<hr />
+<br />
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'cakephpnu';
+    var disqus_url = 'http://cakephp.nu/cakephp-crud/examples/blog.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        </div>
+      </div><!--/row-->
+
+      <hr />
+
+      <footer>
+        <p>&copy; Christian Winther 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://cakephp.nu/cakephp-crud/js/toc.js"></script>
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42609077-1', 'cakephp.nu');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>

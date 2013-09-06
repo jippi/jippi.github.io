@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Related Models - jippi/cakephp-crud</title>
+
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <meta http-equiv="refresh" content="5; url=http://friendsofcake.com/crud//docs/listeners/related-models.html">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="http://cakephp.nu/cakephp-crud/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+
+    <link href="http://cakephp.nu/cakephp-crud/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="http://cakephp.nu/cakephp-crud/css/highlight.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://cakephp.nu/cakephp-crud/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  	<div class="alert alert-block">
+		  <h4>NOTICE!</h4>
+  		This is an archived copy of CRUD, development continues at <a href="http://friendsofcake.com/">Friends Of Cake</a>.<br />
+  		<br />
+  		Please go to <a href="http://friendsofcake.com/crud">the new website</a> for up to date documentation<br />
+  		<br />
+  		You will automatically be redirected in 5 seconds
+		</div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="http://cakephp.nu/cakephp-crud/">jippi/cakephp-crud</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+
+            </p>
+            <ul class="nav">
+              <li class="active"><a href="http://cakephp.nu/cakephp-crud/">Home</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/docs/">Documentation</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/examples/">Examples</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/docs/views/wish-list.html">View</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/docs/todo.html">TODO</a></li>
+              <li><a href="http://cakephp.nu/cakephp-crud/api/develop">API documentation</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Getting started</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/">Introduction</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/installation.html">Installation</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/configuration.html">Configuration</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/conventions.html">Conventions</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/events.html">Events</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/unit-testing.html">Unit Testing</a></li>
+              <li class="nav-header">Actions</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/index.html">Index</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/add.html">Add</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/edit.html">Edit</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/view.html">View</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/delete.html">Delete</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/actions/custom.html">Custom</a></li>
+              <li class="nav-header">Listeners</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/intro.html">Introduction</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/debug-kit.html">Debug Kit</a></li>
+              <li class="active"><a href="http://cakephp.nu/cakephp-crud/docs/listeners/related-models.html">Related Models</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/scaffold.html">Scaffold</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/custom.html">Custom listeners</a></li>
+              <li class="nav-header">API listeners</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/api.html">Api</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/api-field-filter.html">Api Field Filter</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/api-pagination.html">Api Pagination</a></li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/docs/listeners/api-query-log.html">Api Query Log</a></li>
+              <li class="nav-header">Examples</li>
+              <li class=""><a href="http://cakephp.nu/cakephp-crud/examples/blog.html">Blog tutorial</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div>
+        <div class="span9">
+          <div class="toc hide">...toc....</div>
+          <h1 id='filling_related_models_select_boxes'>Filling Related Models select boxes</h1>
+
+<p>This listener is loaded by default in Crud</p>
+
+<p>If you are used to bake or CakePHP scaffolding you might want to have some control over the data it is sent to the view for filling select boxes for associated models.</p>
+
+<p>Crud component can be configured to return the list of record for all related models or just those you want to in a per-action basis</p>
+
+<p>By default all related model lists for main Crud component model instance will be fetched, but only for <code>add</code>, <code>edit</code> and corresponding admin actions.</p>
+
+<p>For instance if your <code>Post</code> model in associated to <code>Tag</code> and <code>Author</code>, then for the aforementioned actions you will have in your view the <code>$authors</code> and <code>$tags</code> variable containing the result of calling find(&#8216;list&#8217;) on each model.</p>
+
+<p>Should you need more fine grain control over the lists fetched, you can configure statically or use dynamic methods:</p>
+
+<h2 id='configuring_relatedmodels'>Configuring relatedModels</h2>
+
+<p>You can enable and disable which model relations you want to have automatically fetched very easily, as shown below.</p>
+
+<p>If you set <code>relatedModels</code> to <code>true</code> all model relations will be fetched automatically.</p>
+
+<p>If you set <code>relatedModels</code> to an <code>array</code>, only the related models in that array will be fetched automatically.</p>
+
+<p>If you set <code>relatedModels</code> to <code>false</code> no model relations will be fetched automatically.</p>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+<span class='k'>class</span> <span class='nc'>DemoController</span> <span class='k'>extends</span> <span class='nx'>AppController</span> <span class='p'>{</span>
+
+  <span class='k'>public</span> <span class='nv'>$components</span> <span class='o'>=</span> <span class='p'>[</span>
+    <span class='s1'>&#39;Crud.Crud&#39;</span> <span class='o'>=&gt;</span> <span class='p'>[</span>
+      <span class='s1'>&#39;actions&#39;</span> <span class='o'>=&gt;</span> <span class='p'>[</span>
+        <span class='s1'>&#39;add&#39;</span> <span class='o'>=&gt;</span> <span class='p'>[</span><span class='s1'>&#39;relatedModels&#39;</span> <span class='o'>=&gt;</span> <span class='p'>[</span><span class='s1'>&#39;Author&#39;</span><span class='p'>]],</span>
+        <span class='s1'>&#39;edit&#39;</span> <span class='o'>=&gt;</span> <span class='p'>[</span><span class='s1'>&#39;relatedModels&#39;</span> <span class='o'>=&gt;</span> <span class='p'>[</span><span class='s1'>&#39;Tag&#39;</span><span class='p'>,</span> <span class='s1'>&#39;Cms.Page&#39;</span><span class='p'>]]</span>
+      <span class='p'>]</span>
+    <span class='p'>]</span>
+  <span class='p'>];</span>
+
+<span class='p'>}</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+<p>It&#8217;s possible to dynamically reconfigure the <code>relatedModels</code> listener</p>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+<span class='c1'>// This can be changed in beforeFilter and the controller action</span>
+<span class='k'>public</span> <span class='k'>function</span> <span class='nf'>beforeFilter</span><span class='p'>()</span> <span class='p'>{</span>
+  <span class='c1'>// Automatically executes find(&#39;list&#39;) on the User ($users) and Tag ($tags) models</span>
+  <span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>action</span><span class='p'>(</span><span class='nv'>$action</span><span class='p'>)</span><span class='o'>-&gt;</span><span class='na'>config</span><span class='p'>(</span><span class='s1'>&#39;relatedModels&#39;</span><span class='p'>,</span> <span class='k'>array</span><span class='p'>(</span><span class='s1'>&#39;User&#39;</span><span class='p'>,</span> <span class='s1'>&#39;Tag&#39;</span><span class='p'>));</span>
+
+  <span class='c1'>// Automatically executes find(&#39;list&#39;) on the User ($users) model</span>
+  <span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>action</span><span class='p'>(</span><span class='nv'>$action</span><span class='p'>)</span><span class='o'>-&gt;</span><span class='na'>config</span><span class='p'>(</span><span class='s1'>&#39;relatedModels&#39;</span><span class='p'>,</span> <span class='k'>array</span><span class='p'>(</span><span class='s1'>&#39;User&#39;</span><span class='p'>));</span>
+
+  <span class='c1'>// Fetch related data from all model relations (default)</span>
+  <span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>action</span><span class='p'>(</span><span class='nv'>$action</span><span class='p'>)</span><span class='o'>-&gt;</span><span class='na'>config</span><span class='p'>(</span><span class='s1'>&#39;relatedModels&#39;</span><span class='p'>,</span> <span class='k'>true</span><span class='p'>);</span>
+
+  <span class='c1'>// Don&#39;t fetch any related data</span>
+  <span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>action</span><span class='p'>(</span><span class='nv'>$action</span><span class='p'>)</span><span class='o'>-&gt;</span><span class='na'>config</span><span class='p'>(</span><span class='s1'>&#39;relatedModels&#39;</span><span class='p'>,</span> <span class='k'>false</span><span class='p'>);</span>
+
+  <span class='c1'>// Get the current configuration</span>
+  <span class='nv'>$config</span> <span class='o'>=</span> <span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>action</span><span class='p'>(</span><span class='nv'>$action</span><span class='p'>)</span><span class='o'>-&gt;</span><span class='na'>config</span><span class='p'>(</span><span class='s1'>&#39;relatedModels&#39;</span><span class='p'>);</span>
+<span class='p'>}</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+<h2 id='related_models_list_events'>Related models&#8217; list events</h2>
+
+<p>If for any reason you need to alter the query or final results generated by fetching related models lists, you can use <code>Crud.beforeRelatedModel</code> and <code>Crud.afterRelatedModel</code> events to inject your own logic.</p>
+
+<p><code>Crud.beforeRelatedModel</code> will receive the following parameters in the event subject, which can be altered on the fly before any result is fetched</p>
+
+<p>* query: An array with options for find(&#8216;list&#8217;) model: Model instance, the model to be used for * finding the list or records</p>
+
+<p><code>Crud.afterRelatedModel</code> will receive the following parameters in the event subject, which can be altered on the fly after results were fetched</p>
+
+<p>* items: result from calling find(&#8216;list&#8217;) viewVar: Variable name to be set on the view with items * as value model: Model instance, the model to be used for finding the list or records</p>
+
+<h2 id='example'>Example</h2>
+<div class='highlight'><pre><code class='php'><span class='cp'>&lt;?php</span>
+<span class='k'>class</span> <span class='nc'>DemoController</span> <span class='k'>extends</span> <span class='nx'>AppController</span> <span class='p'>{</span>
+  <span class='c1'>//...</span>
+
+  <span class='k'>public</span> <span class='k'>function</span> <span class='nf'>beforeFilter</span><span class='p'>()</span> <span class='p'>{</span>
+    <span class='k'>parent</span><span class='o'>::</span><span class='na'>beforeFilter</span><span class='p'>();</span>
+
+    <span class='c1'>//Authors list should only have the 3 most recen items</span>
+    <span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>on</span><span class='p'>(</span><span class='s1'>&#39;beforeRelatedModel&#39;</span><span class='p'>,</span> <span class='k'>function</span><span class='p'>(</span><span class='nv'>$event</span><span class='p'>)</span> <span class='p'>{</span>
+      <span class='k'>if</span> <span class='p'>(</span><span class='nv'>$event</span><span class='o'>-&gt;</span><span class='na'>subject</span><span class='o'>-&gt;</span><span class='na'>model</span> <span class='nx'>instanceof</span> <span class='nx'>Author</span><span class='p'>)</span> <span class='p'>{</span>
+        <span class='nv'>$event</span><span class='o'>-&gt;</span><span class='na'>subject</span><span class='o'>-&gt;</span><span class='na'>query</span><span class='p'>[</span><span class='s1'>&#39;limit&#39;</span><span class='p'>]</span> <span class='o'>=</span> <span class='mi'>3</span><span class='p'>;</span>
+        <span class='nv'>$event</span><span class='o'>-&gt;</span><span class='na'>subject</span><span class='o'>-&gt;</span><span class='na'>query</span><span class='p'>[</span><span class='s1'>&#39;order&#39;</span><span class='p'>]</span> <span class='o'>=</span> <span class='k'>array</span><span class='p'>(</span><span class='s1'>&#39;Author.created&#39;</span> <span class='o'>=&gt;</span> <span class='s1'>&#39;DESC&#39;</span><span class='p'>);</span>
+      <span class='p'>}</span>
+    <span class='p'>});</span>
+
+    <span class='nv'>$this</span><span class='o'>-&gt;</span><span class='na'>Crud</span><span class='o'>-&gt;</span><span class='na'>on</span><span class='p'>(</span><span class='s1'>&#39;afterRelatedModel&#39;</span><span class='p'>,</span> <span class='k'>function</span><span class='p'>(</span><span class='nv'>$event</span><span class='p'>)</span> <span class='p'>{</span>
+      <span class='k'>if</span> <span class='p'>(</span><span class='nv'>$event</span><span class='o'>-&gt;</span><span class='na'>subject</span><span class='o'>-&gt;</span><span class='na'>model</span> <span class='nx'>instanceof</span> <span class='nx'>Tag</span><span class='p'>)</span> <span class='p'>{</span>
+        <span class='nv'>$event</span><span class='o'>-&gt;</span><span class='na'>subject</span><span class='o'>-&gt;</span><span class='na'>items</span> <span class='o'>+=</span> <span class='k'>array</span><span class='p'>(</span><span class='mi'>0</span> <span class='o'>=&gt;</span> <span class='s1'>&#39;N/A&#39;</span><span class='p'>);</span>
+        <span class='nv'>$event</span><span class='o'>-&gt;</span><span class='na'>subject</span><span class='o'>-&gt;</span><span class='na'>viewVar</span> <span class='o'>=</span> <span class='s1'>&#39;labels&#39;</span><span class='p'>;</span>
+      <span class='p'>}</span>
+    <span class='p'>});</span>
+
+  <span class='p'>}</span>
+
+<span class='p'>}</span>
+<span class='cp'>?&gt;</span><span class='x' />
+</code></pre></div>
+
+					<br />
+<hr />
+<br />
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'cakephpnu';
+    var disqus_url = 'http://cakephp.nu/cakephp-crud/docs/listeners/related-models.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        </div>
+      </div><!--/row-->
+
+      <hr />
+
+      <footer>
+        <p>&copy; Christian Winther 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://cakephp.nu/cakephp-crud/js/toc.js"></script>
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42609077-1', 'cakephp.nu');
+  ga('send', 'pageview');
+
+</script>
+
+  </body>
+</html>
