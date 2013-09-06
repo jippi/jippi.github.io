@@ -2,7 +2,7 @@ url: http://cakephp.nu
 name: CakePHP.nu blog
 description: Cake and cookies by Jippi
 
-exclude: [LICENSE, CNAME, README.md, .gitignore, _README, Gemfile, Gemfile.lock, Rakefile]
+exclude: [LICENSE, README.md, .gitignore, _README, Gemfile, Gemfile.lock, Rakefile]
 
 tag_page_layout: tag
 tag_page_dir: tag
