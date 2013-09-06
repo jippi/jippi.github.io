@@ -21,8 +21,6 @@ task :commit do
   puts "\n## Pushing commits to remote"
   status = system("git push -q origin develop")
   puts status ? "Success" : "Failed"
-
-  system("git checkout develop")
 end
 
 desc "Deploy _site/ to master branch"
@@ -36,7 +34,7 @@ task :deploy do
   puts status ? "Success" : "Failed"
 
   puts "\n## Creating new master branch and switching to it"
-  status = system("git checkout -qb master")
+  status = system("git checkout -q -b master")
   puts status ? "Success" : "Failed"
 
   puts "\n## Forcing the _site subdirectory to be project root"
