@@ -2,6 +2,10 @@ desc "Commit _site/"
 task :commit do
   system("git checkout develop")
 
+  puts "\n## jekyll build"
+  status = system("jekyll build")
+  puts status ? "Success" : "Failed"
+
   puts "\n## Staging modified files"
   status = system("git add -A")
   puts status ? "Success" : "Failed"
