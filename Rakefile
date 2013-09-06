@@ -13,7 +13,7 @@ task :commit do
   puts status ? "Success" : "Failed"
 
   puts "\n## Pushing commits to remote"
-  status = system("git push origin source")
+  status = system("git push origin develop")
   puts status ? "Success" : "Failed"
 
   system("git checkout develop")
