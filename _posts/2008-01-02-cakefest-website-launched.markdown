@@ -4,6 +4,7 @@ author: Christian Winther
 layout: post
 tags:
   - CakePHP
+  - CakeFest
 ---
 
 Just in on google group &#8211; the cake fest website has been launched.
