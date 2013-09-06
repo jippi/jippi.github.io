@@ -40,7 +40,7 @@ task :deploy do
   puts status ? "Success" : "Failed"
 
   puts "\n## Pushing all branches to origin"
-  status = system("git push --all origin")
+  status = system("git push --all --force origin")
   puts status ? "Success" : "Failed"
 
   system("git checkout develop")
