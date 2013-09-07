@@ -4,7 +4,7 @@
  <title>The blog of CakePHP.nu</title>
  <link href="http://cakephp.nu/atom.xml" rel="self"/>
  <link href="http://cakephp.nu"/>
- <updated>2013-09-07T03:59:03+02:00</updated>
+ <updated>2013-09-07T04:03:07+02:00</updated>
  <id>http://cakephp.nu</id>
  <author>
    <name>CakePHP.nu</name>
@@ -84,18 +84,20 @@
 &lt;p&gt;This time around it was more an impulze to buy some books, so I hope I will end up as satisfied as last time I purchased some books from them.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li /&gt;
+&lt;li&gt;&lt;a href='http://www.amazon.co.uk/exec/obidos/ASIN/0596102356'&gt;Building Scalable Web Sites: Building, scaling, and optimizing the next generation of web applications&lt;/a&gt;&lt;/li&gt;
 
-&lt;li /&gt;
+&lt;li&gt;&lt;a href='http://www.amazon.co.uk/exec/obidos/ASIN/0596529260'&gt;RESTful Web Services&lt;/a&gt;&lt;/li&gt;
 
-&lt;li /&gt;
+&lt;li&gt;&lt;a href='http://www.amazon.co.uk/exec/obidos/ASIN/0596529309'&gt;High Performance Web Sites: Essential Knowledge for Front-End Engineers: Essential Knowledge for Front-end Engineers&lt;/a&gt;&lt;/li&gt;
 
-&lt;li /&gt;
+&lt;li&gt;&lt;a href='http://www.amazon.co.uk/exec/obidos/ASIN/0672327562'&gt;PostgreSQL (Developers Library)&lt;/a&gt;&lt;/li&gt;
 
-&lt;li /&gt;
+&lt;li&gt;&lt;a href='http://www.amazon.co.uk/exec/obidos/ASIN/097584198X'&gt;The CSS Anthology: 101 Essential Tips, Tricks and Hacks&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;I will probably give a short review of the books once I have read them ;)&lt;/p&gt;</content>
+&lt;p&gt;I will probably give a short review of the books once I have read them ;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2013 update&lt;/strong&gt;: Nope, no reviews&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -150,7 +152,9 @@
    <updated>2008-01-02T00:00:00+01:00</updated>
    <id>http://cakephp.nu/2008/01/02/cakefest-website-launched</id>
    <content type="html">&lt;p&gt;Just in on google group &amp;#8211; the cake fest website has been launched.&lt;/p&gt;
-&lt;a href='http://www.cakefest.org/' target='_blank'&gt;Head over to the cakefest website and join the fun&lt;/a&gt;
+
+&lt;p&gt;&lt;a href='http://www.cakefest.org/'&gt;Head over to the cakefest website and join the fun&lt;/a&gt;&lt;/p&gt;
+
 &lt;p&gt;Cakefest is the first global meetup for CakePHP (and probably also other PHP programmers) ever, so its going to be very excited&lt;/p&gt;</content>
  </entry>
  
