@@ -1,1 +1,6 @@
+User-agent: *
+
+Disallow: /cakephp-crud/
+Disallow: /t/
+
 Sitemap: http://cakephp.nu/sitemap.xml
