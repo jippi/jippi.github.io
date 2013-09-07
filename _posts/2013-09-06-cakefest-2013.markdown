@@ -9,18 +9,22 @@ tags:
   - Scaling
 ---
 
-The slides for my 3 talks at CakeFest 2013 are now online
+The slides for my 3 talks at CakeFest 2013 are now online.
 
-## [Scaling CakePHP](http://friendsofcake.com/presentations/cakefest-2013/scaling-cakephp)
+__Pro tip__: press "s" on the presentation pages to see my speaker notes.
+
+- [Scaling CakePHP](http://friendsofcake.com/presentations/cakefest-2013/scaling-cakephp)
 
 A talk on scaling CakePHP. It got surprisingly little to do with CakePHP, and so much more to do with PHP and the underlying infrastructure for your servers.
 
-## [Crud - Application Development on steroids](http://friendsofcake.com/crud/presentations/jippi-cakefest-2013/)
+- [Crud - Application Development on steroids](http://friendsofcake.com/crud/presentations/jippi-cakefest-2013/)
 
 Talk on [CRUD](https://github.com/friendsofcake/crud), describing the pro and cons of bake, scaffolding and CRUD, and how awesome CRUD really is.
 
-## [Friends Of Cake](http://friendsofcake.com/presentations/cakefest-2013/friends-of-cake/)
+- [Friends Of Cake](http://friendsofcake.com/presentations/cakefest-2013/friends-of-cake/)
 
 I presented the vision for [Friends Of Cake](http://friendsofcake.com/) and what we want to achieve with the project and how it can benefit the CakePHP community.
 
-__Pro tip__: press "s" on the presentation page to see my speaker notes.
+- Other talks
+
+For the other talks & their slides, please see the [lanyrd page for cakefest 2013](http://lanyrd.com/2013/cakefest/).

@@ -4,7 +4,7 @@
  <title>The blog of CakePHP.nu</title>
  <link href="http://cakephp.nu/atom.xml" rel="self"/>
  <link href="http://cakephp.nu"/>
- <updated>2013-09-07T03:51:48+02:00</updated>
+ <updated>2013-09-07T03:58:30+02:00</updated>
  <id>http://cakephp.nu</id>
  <author>
    <name>CakePHP.nu</name>
@@ -17,21 +17,33 @@
    <link href="http://cakephp.nu/2013/09/06/cakefest-2013.html"/>
    <updated>2013-09-06T00:00:00+02:00</updated>
    <id>http://cakephp.nu/2013/09/06/cakefest-2013</id>
-   <content type="html">&lt;p&gt;The slides for my 3 talks at CakeFest 2013 are now online&lt;/p&gt;
+   <content type="html">&lt;p&gt;The slides for my 3 talks at CakeFest 2013 are now online.&lt;/p&gt;
 
-&lt;h2 id='scaling_cakephp'&gt;&lt;a href='http://friendsofcake.com/presentations/cakefest-2013/scaling-cakephp'&gt;Scaling CakePHP&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Pro tip&lt;/strong&gt;: press &amp;#8220;s&amp;#8221; on the presentation pages to see my speaker notes.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='http://friendsofcake.com/presentations/cakefest-2013/scaling-cakephp'&gt;Scaling CakePHP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;A talk on scaling CakePHP. It got surprisingly little to do with CakePHP, and so much more to do with PHP and the underlying infrastructure for your servers.&lt;/p&gt;
 
-&lt;h2 id='crud__application_development_on_steroids'&gt;&lt;a href='http://friendsofcake.com/crud/presentations/jippi-cakefest-2013/'&gt;Crud - Application Development on steroids&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='http://friendsofcake.com/crud/presentations/jippi-cakefest-2013/'&gt;Crud - Application Development on steroids&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Talk on &lt;a href='https://github.com/friendsofcake/crud'&gt;CRUD&lt;/a&gt;, describing the pro and cons of bake, scaffolding and CRUD, and how awesome CRUD really is.&lt;/p&gt;
 
-&lt;h2 id='friends_of_cake'&gt;&lt;a href='http://friendsofcake.com/presentations/cakefest-2013/friends-of-cake/'&gt;Friends Of Cake&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href='http://friendsofcake.com/presentations/cakefest-2013/friends-of-cake/'&gt;Friends Of Cake&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;I presented the vision for &lt;a href='http://friendsofcake.com/'&gt;Friends Of Cake&lt;/a&gt; and what we want to achieve with the project and how it can benefit the CakePHP community.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Pro tip&lt;/strong&gt;: press &amp;#8220;s&amp;#8221; on the presentation page to see my speaker notes.&lt;/p&gt;</content>
+&lt;ul&gt;
+&lt;li&gt;Other talks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For the other talks &amp;amp; their slides, please see the &lt;a href='http://lanyrd.com/2013/cakefest/'&gt;lanyrd page for cakefest 2013&lt;/a&gt;.&lt;/p&gt;</content>
  </entry>
  
  <entry>
