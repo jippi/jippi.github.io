@@ -50,6 +50,12 @@ task :deploy do
   puts status ? "Success" : "Failed"
 end
 
-desc "Commit and deploy _site/"
-  task :commit_deploy => [:commit, :deploy] do
+desc "Submit google sitemap"
+task :sitemap do
+  puts "\n## Submitting sitemap.xml to google"
+  system("curl -i google.com/webmasters/tools/ping?sitemap=http%3A%2F%2Fcakephp.nu%2Fsitemap.xml")
+end
+
+desc "Build, Commit, deploy and notify google/"
+  task :update => [:commit, :deploy, :sitemap] do
 end
