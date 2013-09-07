@@ -1,4 +1,9 @@
 ---
 layout: nil
 ---
+User-agent: *
+
+Disallow: /cakephp-crud/
+Disallow: /t/
+
 Sitemap: {{site.url}}/sitemap.xml
